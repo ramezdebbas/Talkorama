@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Talkorama.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Talkorama"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cfo="using:CharmFlyoutLibrary"
+    mc:Ignorable="d">
+
+    <Grid Background="OrangeRed">
+        <cfo:CharmFlyout
+           x:Name="cfoAbout"
+           Heading="About"
+           HeadingBackgroundBrush="#FF4E0000"
+           Grid.RowSpan="2">
+            <StackPanel x:Name="cfoAboutPanel">
+                <TextBlock x:Name="cfoLine1" TextWrapping="Wrap" FontSize="16">Talkorama.</TextBlock>
+                <TextBlock x:Name="cfoBlank1" />
+                <TextBlock x:Name="cfoLine2" TextWrapping="Wrap" FontSize="16">Chat with this online friend for hours and it will never get bored and will try to keep you entertained as well.</TextBlock>
+
+            </StackPanel>
+        </cfo:CharmFlyout>
+        <StackPanel>
+            <TextBlock x:Name="PageTitle"  Text="Talkorama" Style="{StaticResource PageHeaderTextStyle}" Margin="50,20,0,0"/>
+            <Border BorderBrush="White" BorderThickness="3" Margin="50,40,50,10" Height="400">
+                <TextBlock x:Name="taloramasays" Text="Chat with me about anything, my friend." FontSize="27"></TextBlock>
+            </Border>
+            <TextBox x:Name="Message" Margin="50,10,50,10" Height="150" TextWrapping="Wrap" FontSize="27"/>
+            <Button x:Name="btnTalk" PointerPressed="BtnTalk_OnPointerPressed" Click="BtnTalk_OnClick" Content="Talk" HorizontalAlignment="Right" Margin="50,0,50,0" FontSize="27"></Button>
+        </StackPanel>
+
+    </Grid>
+</Page>
